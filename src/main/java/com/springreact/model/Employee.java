@@ -1,16 +1,44 @@
 package com.springreact.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
+
+
+@Entity
+@Table(name = "employees")
 public class Employee {
-	private long eid;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	
+	@Column(name = "name")
 	private String name;
+	
+	@Column(name = "role")
 	private String role;
 	
-	public long getEid() {
-		return eid;
+	public Employee() {
+		
 	}
 	
-	public void setId(long eid) {
-		this.eid = eid;
+	
+	public Employee(String name, String role) {
+		super();
+		this.name = name;
+		this.role = role;
+	}
+	
+	public long getId() {
+		return id;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
 	}
 	
 	public String getName() {
