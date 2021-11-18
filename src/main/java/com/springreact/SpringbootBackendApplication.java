@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 
 @SpringBootApplication
-public class SpringbootBackendApplication implements CommandLineRunner {
+public class SpringbootBackendApplication {
 
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+//	@Autowired
+//	private JdbcTemplate jdbcTemplate;
 	
 	
 	public static void main(String[] args) {
@@ -18,16 +18,16 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 		
 	}
 	
-	@Override
-	public void run (String... args) throws Exception {
-		
-		String sql = "INSERT INTO employees (eid, name, role) VALUES ('001', 'Leo Rondeau', 'Creator')";
-		
-		int rows = jdbcTemplate.update(sql);
-		if(rows > 0) {
-			System.out.println("A new row has been added");
-		}
-	}
+//	@Override
+//	public void run (String... args) throws Exception {
+//		
+//		String sql = "INSERT INTO employees (eid, name, role) VALUES ('001', 'Leo Rondeau', 'Creator')";
+//		
+//		int rows = jdbcTemplate.update(sql);
+//		if(rows > 0) {
+//			System.out.println("A new row has been added");
+//		}
+//	}
 	
 
 }
