@@ -1,6 +1,7 @@
 package com.springreact.model;
 
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,7 +15,7 @@ public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	
 	@Column(name = "name")
 	private String name;
@@ -32,30 +33,37 @@ public class Employee {
 		this.name = name;
 		this.role = role;
 	}
-	
-	public long getId() {
+
+
+	public Long getId() {
 		return id;
 	}
-	
-	public void setId(long id) {
+
+
+	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
+
 	public String getName() {
 		return name;
 	}
 
+
 	public void setName(String name) {
 		this.name = name;
-		
 	}
-	
-	public String getRole( ) {
+
+
+	public String getRole() {
 		return role;
 	}
-	
+
+
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+	
 	
 }
